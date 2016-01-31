@@ -1,16 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-int tadd_ok(int x, int y){
-  int sum = x + y;
-  if (sum >= 0 && x < 0 && y < 0) {
-    return 0;
-  }
-  if (sum < 0 && y > 0) {
-    return 0;
-  }
-  return 1;
-}
+int tadd_ok(int x, int y);
 
 int main()
 {
@@ -31,4 +22,15 @@ int main()
 	} else {
 		puts("Overflow will occur.");
 	}
+}
+
+int tadd_ok(int x, int y){
+  int sum = x + y;
+  if (sum >= 0 && x < 0 && y < 0) {
+    return 0;
+  }
+  if (sum < 0 && y > 0) {
+    return 0;
+  }
+  return 1;
 }
